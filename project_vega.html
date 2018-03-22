@@ -38,16 +38,21 @@
     {
       "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
       "data": {
-        "url": "a1-burton.csv"
+        "url": "a1-burtin.csv"
       },
       "mark": "point",
       "encoding": {
+        "column": {
+          "field": "Staining",
+          "type": "nominal"
+        },
         "x": {
-          "field": "Penicilin",
+          "field": "Bacteria",
           "type": "nominal"
         },
         "y": {
-          "field": "Aerobacter aerogenes",
+          "aggregate": "mean",
+          "field": "Penicilin",
           "type": "quantitative"
         }
       },
